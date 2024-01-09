@@ -1,4 +1,4 @@
-package level4;
+package solution.level4;
 
 import java.io.*;
 import java.util.StringTokenizer;
