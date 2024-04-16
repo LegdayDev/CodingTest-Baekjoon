@@ -22,10 +22,10 @@ import java.io.*;
  * 거스름돈은 항상 $5.00 이하이고, 손님이 받는 동전의 개수를 최소로 하려고 한다. 예를 들어, $1.24를 거슬러 주어야 한다면, 손님은 4쿼터, 2다임, 0니켈, 4페니를 받게 된다.
  * </p>
  * <li>
- *     입력 : 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 거스름돈 C를 나타내는 정수 하나로 이루어져 있다. C의 단위는 센트이다. (1달러 = 100센트) (1<=C<=500)
+ * 입력 : 첫째 줄에 테스트 케이스의 개수 T가 주어진다. 각 테스트 케이스는 거스름돈 C를 나타내는 정수 하나로 이루어져 있다. C의 단위는 센트이다. (1달러 = 100센트) (1<=C<=500)
  * </li>
  * <li>
- *     출력 : 각 테스트케이스에 대해 필요한 쿼터의 개수, 다임의 개수, 니켈의 개수, 페니의 개수를 공백으로 구분하여 출력한다.
+ * 출력 : 각 테스트케이스에 대해 필요한 쿼터의 개수, 다임의 개수, 니켈의 개수, 페니의 개수를 공백으로 구분하여 출력한다.
  * </li>
  */
 public class Question2720 {
@@ -33,14 +33,18 @@ public class Question2720 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String testcase = br.readLine();
+        int testcase = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < testcase.length(); i++) {
-            double v = Double.parseDouble(br.readLine());
+        for (int i = 0; i < testcase; i++) {
+            int v = Integer.parseInt(br.readLine()); // 124 -> 124.0
 
-
+            int quarter = (v / 25);
+            int dime = ((v % 25) / 10);
+            int nickel = (((v % 25) % 10) / 5);
+            int penny = ((((v % 25) % 10) % 5) / 1); // Double 로 하면 범위가 커져서 0.39999998 로 나오기 때문에 Float 으로 사용
+            bw.write(quarter + " " + dime + " " + nickel + " " + penny + "\n");
+            bw.flush();
         }
-
 
         bw.close();
         br.close();
