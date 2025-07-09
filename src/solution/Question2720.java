@@ -1,4 +1,4 @@
-package solution.level8;
+package solution;
 
 import java.io.*;
 

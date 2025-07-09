@@ -1,4 +1,4 @@
-package solution.level6;
+package solution;
 
 import java.io.*;
 import java.util.StringTokenizer;

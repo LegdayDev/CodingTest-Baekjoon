@@ -1,4 +1,4 @@
-package solution.level6;
+package solution;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package solution.level5;
+package solution;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package solution.class02;
+package solution;
 
 import java.io.*;
 
