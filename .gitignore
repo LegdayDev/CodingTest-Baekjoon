@@ -2,3 +2,5 @@
 out
 CodingTest.iml
 CodingTest-Baekjoon.iml
+.vscode
+/cpp/*.exe
