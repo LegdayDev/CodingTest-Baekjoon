@@ -4,3 +4,4 @@ CodingTest.iml
 CodingTest-Baekjoon.iml
 .vscode
 /cpp/*.exe
+/cpp/*/*.exe
